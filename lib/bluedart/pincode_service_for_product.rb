@@ -19,7 +19,7 @@ module Bluedart
     def response
       wsa = 'http://tempuri.org/IServiceFinderQuery/GetServicesforProduct'
       opts = {message: 'GetServicesforProduct', wsa: wsa, params: {pinCode: @pincode, pProductCode: @product_code, pSubProductCode: @sub_product_code}, extra: {'profile' => @profile}, url: request_url}
-      make_request(opts)
+      make_request(opts, 3) # After 3 second timeout
     end
   end
 end

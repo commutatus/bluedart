@@ -179,9 +179,10 @@ module Bluedart
     # Fire XML request and return parsed response
     #
     # Returns Hash
-    def make_request(opts)
+    # 60 default timeout is because AWB generation takes more time.
+    def make_request(opts, timeout=60)
       body = request_xml(opts)
-      response = request(opts[:url], body.to_xml)
+      response = request(opts[:url], body.to_xml, timeout)
       response_return(response, opts[:message])
     end
 
@@ -233,8 +234,8 @@ module Bluedart
     # Fires request and returns response
     #
     # Returns Hash
-    def request(url, body)
-      res = HTTParty.post(url, body: body, headers: {'Content-Type' => 'application/soap+xml; charset="utf-8"'}, :verify => false)
+    def request(url, body, timeout)
+      res = HTTParty.post(url, body: body, headers: {'Content-Type' => 'application/soap+xml; charset="utf-8"'}, timeout: timeout, verify: false)
       content = xml_hash(res.body)[:envelope][:body]
     end
 
