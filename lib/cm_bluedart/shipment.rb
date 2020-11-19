@@ -1,4 +1,4 @@
-module Bluedart
+module CmBluedart
   class Shipment < Base
     def initialize(details)
       @shipper = shipper_hash(details[:shipper_details])

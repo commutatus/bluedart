@@ -1,7 +1,7 @@
 require 'httparty'
 require 'nori'
 
-module Bluedart
+module CmBluedart
   class Tracking
     attr_reader :response
 

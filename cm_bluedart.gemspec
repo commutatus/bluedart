@@ -1,17 +1,18 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'bluedart/version'
+require 'cm_bluedart/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "bluedart"
-  spec.version       = Bluedart::VERSION
-  spec.authors       = ["CJ"]
-  spec.email         = ["chirag7jain@gmail.com"]
+  spec.name          = "cm-bluedart"
+  spec.version       = CmBluedart::VERSION
+  spec.authors       = ["Viveck", "Anbazhagan Palani"]
+  spec.email         = ['anbu@commutatus.com', 'vivek@commutatus.com', ]
 
   spec.summary       = %q{Bluedart Web Services}
   spec.description   = %q{Provides an interface to Bluedart Web Services}
-  spec.homepage      = "https://github.com/chirag7jain/bluedart"
+  spec.homepage      = "https://github.com/commutatus/bluedart"
+  spec.metadata    = { "source_code_uri" => "https://github.com/commutatus/bluedart" }  
   spec.licenses      = ["MIT"]
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

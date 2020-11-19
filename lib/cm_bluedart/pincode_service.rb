@@ -1,4 +1,4 @@
-module Bluedart
+module CmBluedart
   class PincodeService < Base
     def initialize(details)
       @pincode = details[:pincode]

@@ -1,4 +1,4 @@
-module Bluedart
+module CmBluedart
   class CancelPickup < Base
     def initialize(details)
       @cancel_pickup_request_details = cancel_pickup_request_hash(details[:cancel_pickup_request])
