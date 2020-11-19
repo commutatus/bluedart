@@ -1,4 +1,4 @@
-module Bluedart
+module CmBluedart
   class Pickup < Base
     def initialize(details)
       @pickup_registration_request = pickup_registration_request_hash(details[:pickup_request])

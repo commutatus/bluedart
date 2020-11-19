@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'httparty'
 require 'nori'
 
-module Bluedart
+module CmBluedart
   class Base
     private
 
