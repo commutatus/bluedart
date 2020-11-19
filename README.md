@@ -1,4 +1,4 @@
-# Bluedart Gem
+# CmBluedart Gem
 
 The Gem provides an interface to Bluedart APIs. Currently under development. FYI This gem is neither built nor promoted by Bluedart. To experiment with the code, run `bin/console` for an interactive prompt.
 
@@ -7,7 +7,7 @@ The Gem provides an interface to Bluedart APIs. Currently under development. FYI
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bluedart'
+gem 'cm-bluedart'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install bluedart
+    $ gem install cm-bluedart
 
 ## Usage
 
@@ -25,7 +25,7 @@ Or install it yourself as:
 ```ruby
 pincode_details = {pincode: 411028, mode: 'development', creds: {license_key: '', login_id: ''}}
 
-p = Bluedart::PincodeService.new(pincode_details)
+p = CmBluedart::PincodeService.new(pincode_details)
 p.response
 ```
 
@@ -42,7 +42,7 @@ shipment_details[:consignee_details] = {consignee_name:"Ninja", address:"hogsmea
 
 shipment_details[:services] = {piece_count:1, actual_weight:0.1, pack_type:"", invoice_no:"", special_instruction:"", declared_value:9999, credit_reference_no:"9999", dimensions:"", pickup_date:'2015-12-12', pickup_time:"1313", commodities:['Crack'], product_type:"Dutiables", collectable_amount:5050, product_code:"A", sub_product_code:"C", p_d_f_output_not_required:false}
 
-b = Bluedart::Shipment.new(shipment_details)
+b = CmBluedart::Shipment.new(shipment_details)
 b.response
 ```
 
@@ -54,7 +54,7 @@ tracking_details = {creds: {license_key: '', login_id: ''}, scans: 0}
 
 tracking_details[:numbers] = ['123456798']
 
-t = Bluedart::Tracking.new(tracking_details)
+t = CmBluedart::Tracking.new(tracking_details)
 t.request
 
 ```
@@ -67,7 +67,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Gem is originally forked from ( https://github.com/chirag7jain/bluedart/fork )
+This gem is originally forked from ( https://github.com/chirag7jain/bluedart/fork )
 
 1. Fork it ( https://github.com/commutatus/bluedart/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
